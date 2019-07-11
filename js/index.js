@@ -46,20 +46,23 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+let nav = document.querySelector("nav");
+
+
 let newFirstNav = document.createElement("a");
 newFirstNav.textContent = "AppendChild";
-let nav = document.querySelector("nav");
 nav.appendChild(newFirstNav);
 let newLastNav = document.createElement("a");
 newLastNav.textContent = "Prepend";
 nav.prepend(newLastNav);
+
 let navItems = document.querySelectorAll("a");
-navItems[0].textContent = siteContent.nav["nav-item-1"];
-navItems[1].textContent = siteContent.nav["nav-item-2"];
-navItems[2].textContent = siteContent.nav["nav-item-3"];
-navItems[3].textContent = siteContent.nav["nav-item-4"];
-navItems[4].textContent = siteContent.nav["nav-item-5"];
-navItems[5].textContent = siteContent.nav["nav-item-6"];
+navItems[1].textContent = siteContent.nav["nav-item-1"];
+navItems[2].textContent = siteContent.nav["nav-item-2"];
+navItems[3].textContent = siteContent.nav["nav-item-3"];
+navItems[4].textContent = siteContent.nav["nav-item-4"];
+navItems[5].textContent = siteContent.nav["nav-item-5"];
+navItems[6].textContent = siteContent.nav["nav-item-6"];
 
 navItems.forEach( (cv) => {return cv.style.color = "green"});
 
